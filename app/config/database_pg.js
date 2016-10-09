@@ -1,11 +1,11 @@
 /**
  * Setting up Postgres Pool here
  */
+import {FileReader} from "./../helpers/FileReader";
+
 var PgNative = require('pg').native;
 
 var Pool = PgNative.Pool;
-
-var FileReader = require('../helpers/FileReader');
 
 var fileReader = new FileReader();
 
