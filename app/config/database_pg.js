@@ -3,24 +3,29 @@
  */
 import {FileReader} from "./../helpers/FileReader";
 
-var PgNative = require('pg').native;
-var Pool = PgNative.Pool;
+let PostgresConfig = async function(){
+    var PgNative = require('pg').native;
+    var Pool = PgNative.Pool;
 
-var fileReader = new FileReader();
+    var fileReader = new FileReader();
 
-console.log(__dirname);
+    console.log(__dirname);
 
-var stats = fileReader.stat(__dirname+"/parameters.json");
-var parameters = fileReader.readFile(__dirname+"/parameters.json");
+    var stats = await fileReader.stat(__dirname+"/parameters.json");
+    var parameters = await fileReader.readFile(__dirname+"/parameters.json");
 
-console.log(stats);
-console.log(parameters);
+    console.log("File stats:");
+    console.log(stats);
 
-var pgPool = {};
+    console.log("Parameters:");
+    console.log(parameters);
 
-if(parameters){
-    pgPool = new Pool(parameters.database);
-}
+    var pgPool = {};
 
-export default pgPool;
+    if(parameters){
+        pgPool = new Pool(parameters.database);
+    }
+};
+
+export default PostgresConfig;
 

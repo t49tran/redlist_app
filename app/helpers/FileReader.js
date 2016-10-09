@@ -5,11 +5,11 @@ class FileReader{
     }
 
     async stat(file) {
-        return await fs.stat(file);
+        return fs.stat(file);
     }
 
     async readFile(file) {
-        return await fs.readFile(file);
+        return fs.readFile(file);
     }
 }
 
