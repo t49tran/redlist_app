@@ -7,12 +7,12 @@ class FileReader{
     constructor(){
     }
 
-    async stat(file) {
-        return fs.stat(file);
+    stat(file) {
+        return fs.statAsync(file);
     }
 
-    async readFile(file) {
-        return fs.readFile(file);
+    readFile(file) {
+        return fs.readFileAsync(file);
     }
 }
 

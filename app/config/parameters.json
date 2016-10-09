@@ -11,6 +11,6 @@
         "host" : "localhost",
         "user" : "redlist",
         "password" : "danger002!",
-        "schema"   : "redlist_Db"
+        "database"   : "redlist_Db"
     }
 }
