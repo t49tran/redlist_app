@@ -9,8 +9,8 @@ var Pool = PgNative.Pool;
 
 var fileReader = new FileReader();
 
-var stats = fileReader.stat("./parameters.json");
-var parameters = fileReader.readFile("./parameters.json");
+var stats = fileReader.stat("parameters.json");
+var parameters = fileReader.readFile("parameters.json");
 
 console.log(stats);
 console.log(parameters);
