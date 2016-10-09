@@ -4,13 +4,14 @@
 import {FileReader} from "./../helpers/FileReader";
 
 var PgNative = require('pg').native;
-
 var Pool = PgNative.Pool;
 
 var fileReader = new FileReader();
 
-var stats = fileReader.stat("parameters.json");
-var parameters = fileReader.readFile("parameters.json");
+console.log(__dirname);
+
+var stats = fileReader.stat(__dirname+"/parameters.json");
+var parameters = fileReader.readFile(__dirname+"/parameters.json");
 
 console.log(stats);
 console.log(parameters);
