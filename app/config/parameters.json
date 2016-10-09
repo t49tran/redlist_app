@@ -1,0 +1,16 @@
+{
+    "apis": {
+        "redlist" : {
+            "token": ""
+        }
+    },
+    "database" : {
+        "port" : 5432,
+        "max": 10,
+        "idleTimeoutMillis": 30000,
+        "host" : "localhost",
+        "user" : "redlist",
+        "password" : "danger002!",
+        "schema"   : "redlist_Db"
+    }
+}
