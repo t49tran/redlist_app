@@ -9,15 +9,17 @@ var Pool = PgNative.Pool;
 
 var fileReader = new FileReader();
 
-var parameters =  fileReader.readFile("parameters.json");
+var stats = fileReader.stat("./parameters.json");
+var parameters = fileReader.readFile("./parameters.json");
+
+console.log(stats);
+console.log(parameters);
 
 var pgPool = {};
 
 if(parameters){
     pgPool = new Pool(parameters.database);
 }
-
-console.log(parameters);
 
 export default pgPool;
 
