@@ -1,3 +1,8 @@
+/*
+ * Setting up routes
+ * */
+var Router = require('koa-router');
+
 var route__countries = new Router({
     prefix: 'countries'
 });
