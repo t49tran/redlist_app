@@ -1,7 +1,10 @@
+import 'babel-polyfill';
+import 'babel-register';
+
 import Koa from 'koa';
 
-import routes from 'app/config/routes.js';
-import pgPool from 'app/config/database_pg';
+import routes from './app/config/routes.js';
+import pgPool from './app/config/database_pg';
 
 var app = new Koa();
 
