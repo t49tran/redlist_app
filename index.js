@@ -4,7 +4,9 @@ import 'babel-register';
 import Koa from 'koa';
 
 import routes from './app/config/routes.js';
-import pgPool from './app/config/database_pg';
+import PostgresConfig from './app/config/database_pg';
+
+var Postgres = PostgresConfig();
 
 var app = new Koa();
 
