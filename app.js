@@ -2,9 +2,19 @@
 
 require('babel-polyfill');
 
+require('babel-register');
+
 var _koa = require('koa');
 
 var _koa2 = _interopRequireDefault(_koa);
+
+var _routes = require('./app/config/routes.js');
+
+var _routes2 = _interopRequireDefault(_routes);
+
+var _database_pg = require('./app/config/database_pg');
+
+var _database_pg2 = _interopRequireDefault(_database_pg);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
